@@ -1,0 +1,11 @@
+name: JWilk
+description: First Drupal 8 theme
+type: theme
+core: 8.x
+libraries:
+  - jwilk/global-css
+  - jwilk/global-js
+stylesheets-remove:
+regions:
+  header: Header
+  content: Content
