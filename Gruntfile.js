@@ -9,17 +9,19 @@ module.exports = function (grunt) {
         src: ['themes/zurb_foundation/STARTER/js/*.js'],
         dest: 'themes/zurb_foundation/js/script.js'
       }
-    }
+    },
 
     sass: {
       dist: {
         options: {
-          outputStyle: 'compressed',
-          includePaths: ['scss']
+          style: 'compressed',
+          includePaths: ['scss'],
         },
         files: {
           'css/foundation.min.css': 'scss/foundation.scss',
           'css/zurb_foundation.min.css': 'scss/zurb_foundation.scss'
+          // 'scss/foundation.scss': 'css/foundation.min.css',
+          // 'scss/zurb_foundation.scss': 'css/zurb_foundation.min.css'
         }
       }
     },
@@ -41,13 +43,15 @@ module.exports = function (grunt) {
         files: 'scss/**/*.scss',
         tasks: ['sass']
       }
-
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  
-  grunt.registerTask('build', ['copy', 'sass']);
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
+  grunt.registerTask('build', ['copy', 'sass']);
+  
   grunt.registerTask('default', ['build', 'watch']);
 };
