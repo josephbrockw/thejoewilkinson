@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       
       {/* Projects Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
+      <section className="py-20 px-4 max-w-6xl mx-auto" id="projects">
         <Link href="/projects" className="block text-center mb-12 group">
           <h2 className="font-heading text-4xl font-bold text-primary group-hover:text-primary/80 transition-colors cursor-pointer">
             Featured Projects
@@ -19,7 +19,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
             title="Prompt with Friends"
-            description="Mobile game where users create prompts to create the best image for a given theme."
+            description="A social party game where players write creative prompts and compete to generate the funniest or most on-theme AI images — the best image wins the round."
             image="/images/pwf_logo.png"
             technologies={["ReactNative", "GenAI", "Python", "Django"]}
             objectFit="contain"
@@ -32,10 +32,11 @@ export default function Home() {
             objectFit="contain"
           />
           <ProjectCard
-            title="AI Chat Application"
-            description="Real-time chat with OpenAI integration, built with Socket.io and React for seamless conversations."
-            image="null"
-            technologies={["React", "OpenAI", "Socket.io", "Node.js"]}
+            title="TripleBlind Router"
+            description="Developed the TripleBlind Router, the core service powering authentication, data sharing permissions, and multi-party compute orchestration between organizations within the Privacy Suite platform."
+            image="/images/TripleBlind_logo.png"
+            technologies={["Django", "API", "React", "Celery"]}
+            objectFit="contain"
           />
         </div>
       </section>
@@ -50,19 +51,19 @@ export default function Home() {
             <div className="p-6">
               <h3 className="font-heading text-xl text-primary mb-4">Frontend</h3>
               <p className="text-secondary">
-                React, Next.js, TypeScript, Tailwind CSS, NextUI
+                React, Next.js, TypeScript, Tailwind CSS, NextUI, ReactNative, MaterialUI
               </p>
             </div>
             <div className="p-6">
               <h3 className="font-heading text-xl text-primary mb-4">Backend</h3>
               <p className="text-secondary">
-                Node.js, Python, Django, PostgreSQL, MongoDB
+                Python, Django, Django Rest Framework, Flask, PostgreSQL
               </p>
             </div>
             <div className="p-6">
               <h3 className="font-heading text-xl text-primary mb-4">Tools</h3>
               <p className="text-secondary">
-                Git, Docker, AWS, Vercel, Stripe, OpenAI API
+                Git, Docker, AWS, Vercel, Stripe, OpenAI API, Celery, Bash Scripting
               </p>
             </div>
           </div>
