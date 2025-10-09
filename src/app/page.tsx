@@ -2,7 +2,7 @@
 
 import { HeroSection } from "@/components/HeroSection";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Card, CardBody } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,32 +10,34 @@ export default function Home() {
       <HeroSection />
       
       {/* Projects Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
-        <h2 className="font-heading text-4xl font-bold text-primary text-center mb-12">
-          Featured Projects
-        </h2>
+      <section className="py-20 px-4 max-w-6xl mx-auto" id="projects">
+        <Link href="/projects" className="block text-center mb-12 group">
+          <h2 className="font-heading text-4xl font-bold text-primary group-hover:text-primary/80 transition-colors cursor-pointer">
+            Featured Projects
+          </h2>
+        </Link>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ProjectCard />
-          <Card className="bg-content1 border border-divider hover:border-primary/60 transition-all">
-            <CardBody className="p-6">
-              <h3 className="font-heading text-xl text-primary mb-3">
-                E-commerce Platform
-              </h3>
-              <p className="text-secondary">
-                Next.js + Stripe integration with inventory management and real-time analytics.
-              </p>
-            </CardBody>
-          </Card>
-          <Card className="bg-content1 border border-divider hover:border-primary/60 transition-all">
-            <CardBody className="p-6">
-              <h3 className="font-heading text-xl text-primary mb-3">
-                AI Chat Application
-              </h3>
-              <p className="text-secondary">
-                Real-time chat with OpenAI integration, built with Socket.io and React.
-              </p>
-            </CardBody>
-          </Card>
+          <ProjectCard
+            title="Prompt with Friends"
+            description="A social party game where players write creative prompts and compete to generate the funniest or most on-theme AI images — the best image wins the round."
+            image="/images/pwf_logo.png"
+            technologies={["ReactNative", "GenAI", "Python", "Django"]}
+            objectFit="contain"
+          />
+          <ProjectCard
+            title="Capwise"
+            description="A custom fantasy basketball platform that transforms a dynasty league into a true front office experience— complete with salary cap management, rookie drafts, and a real-time trade machine."
+            image="/images/capwise_logo.png"
+            technologies={["Next.js", "Stripe", "Tailwind", "MongoDB"]}
+            objectFit="contain"
+          />
+          <ProjectCard
+            title="TripleBlind Router"
+            description="Developed the TripleBlind Router, the core service powering authentication, data sharing permissions, and multi-party compute orchestration between organizations within the Privacy Suite platform."
+            image="/images/TripleBlind_logo.png"
+            technologies={["Django", "API", "React", "Celery"]}
+            objectFit="contain"
+          />
         </div>
       </section>
 
@@ -49,19 +51,19 @@ export default function Home() {
             <div className="p-6">
               <h3 className="font-heading text-xl text-primary mb-4">Frontend</h3>
               <p className="text-secondary">
-                React, Next.js, TypeScript, Tailwind CSS, NextUI
+                React, Next.js, TypeScript, Tailwind CSS, NextUI, ReactNative, MaterialUI
               </p>
             </div>
             <div className="p-6">
               <h3 className="font-heading text-xl text-primary mb-4">Backend</h3>
               <p className="text-secondary">
-                Node.js, Python, Django, PostgreSQL, MongoDB
+                Python, Django, Django Rest Framework, Flask, PostgreSQL
               </p>
             </div>
             <div className="p-6">
               <h3 className="font-heading text-xl text-primary mb-4">Tools</h3>
               <p className="text-secondary">
-                Git, Docker, AWS, Vercel, Stripe, OpenAI API
+                Git, Docker, AWS, Vercel, Stripe, OpenAI API, Celery, Bash Scripting
               </p>
             </div>
           </div>
