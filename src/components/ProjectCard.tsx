@@ -20,7 +20,7 @@ export function ProjectCard({ title, description, image, technologies, objectFit
   }
   
   return (
-    <Card className="bg-content1 border border-divider hover:border-primary/60 transition-all group cursor-pointer h-full">
+    <Card className="bg-content1 border border-divider hover:border-primary/60 transition-all group h-full">
       <CardBody className="p-0 flex flex-col h-full">
         {hasImage ? (
           <div className="relative overflow-hidden h-48">

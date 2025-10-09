@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 import { useEffect } from "react";
 
 export function HeroSection() {
@@ -100,7 +101,7 @@ export function HeroSection() {
         
         <p className="text-lg md:text-xl text-secondary/90 max-w-3xl mx-auto mb-12 leading-relaxed">
           Transforming innovative concepts into scalable digital solutions. 
-          From MVP to enterprise-scale applications, I bridge the gap between vision and execution.
+          From idea to MVP to enterprise-scale applications, I bridge the gap between vision and execution.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -114,15 +115,18 @@ export function HeroSection() {
           >
             View Projects
           </Button>
-          <Button
-            variant="bordered"
-            color="primary"
-            size="lg"
-            radius="md"
-            className="font-semibold border-primary/50 hover:border-primary hover:bg-primary/10 transition-all px-10 py-4 text-lg cursor-pointer"
-          >
-            Get In Touch
-          </Button>
+          <Link href="https://www.linkedin.com/in/joebwilkinson/">
+            <Button
+              variant="bordered"
+              color="primary"
+              size="lg"
+              radius="md"
+              className="font-semibold border-primary/50 hover:border-primary hover:bg-primary/10 transition-all px-10 py-4 text-lg cursor-pointer"
+              href="https://www.linkedin.com/in/joebwilkinson/"
+            >
+              Get In Touch
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
