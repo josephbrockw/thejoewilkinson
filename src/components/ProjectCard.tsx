@@ -20,8 +20,8 @@ export function ProjectCard({ title, description, image, technologies, objectFit
   }
   
   return (
-    <Card className="bg-content1 border border-divider hover:border-primary/60 transition-all group cursor-pointer">
-      <CardBody className="p-0">
+    <Card className="bg-content1 border border-divider hover:border-primary/60 transition-all group cursor-pointer h-full">
+      <CardBody className="p-0 flex flex-col h-full">
         {hasImage ? (
           <div className="relative overflow-hidden h-48">
             <Image
@@ -46,14 +46,16 @@ export function ProjectCard({ title, description, image, technologies, objectFit
             </div>
           </div>
         )}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           <h3 className="font-heading text-xl text-primary mb-3 group-hover:text-primary/80 transition-colors">
             {title}
           </h3>
-          <p className="text-secondary mb-4 leading-relaxed">
+          <p className="text-secondary mb-4 leading-relaxed flex-grow">
             {description}
           </p>
-          {technologies && (
+        </div>
+        {technologies && (
+          <div className="px-6 pb-6">
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span
@@ -64,8 +66,8 @@ export function ProjectCard({ title, description, image, technologies, objectFit
                 </span>
               ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </CardBody>
     </Card>
   );
