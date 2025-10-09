@@ -58,7 +58,7 @@ export default function ProjectsPage() {
             My Projects
           </h1>
           <p className="text-lg md:text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
-            A collection of applications and platforms I've built, showcasing expertise in 
+            A collection of applications and platforms I&apos;ve built, showcasing expertise in 
             full-stack development, API design, and modern web technologies.
           </p>
         </div>
