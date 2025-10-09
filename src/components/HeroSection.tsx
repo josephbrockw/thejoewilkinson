@@ -91,7 +91,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="mb-8">
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-primary mb-4 leading-tight">
-            Building Ideas Into Reality
+            Joe Wilkinson 
           </h1>
           <h2 className="font-heading text-xl md:text-2xl lg:text-3xl text-secondary mb-6 font-medium">
             Entrepreneurial Engineer | Startup Builder | Full-Stack Expert
@@ -108,7 +108,7 @@ export function HeroSection() {
             color="primary"
             size="lg"
             radius="md"
-            className="font-semibold shadow-lg hover:shadow-xl transition-all hero-glow px-10 py-4 text-lg"
+            className="font-semibold shadow-lg hover:shadow-xl transition-all hero-glow px-10 py-4 text-lg cursor-pointer"
           >
             View Projects
           </Button>
@@ -117,7 +117,7 @@ export function HeroSection() {
             color="primary"
             size="lg"
             radius="md"
-            className="font-semibold border-primary/50 hover:border-primary hover:bg-primary/10 transition-all px-10 py-4 text-lg"
+            className="font-semibold border-primary/50 hover:border-primary hover:bg-primary/10 transition-all px-10 py-4 text-lg cursor-pointer"
           >
             Get In Touch
           </Button>
