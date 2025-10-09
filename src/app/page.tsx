@@ -2,6 +2,7 @@
 
 import { HeroSection } from "@/components/HeroSection";
 import { ProjectCard } from "@/components/ProjectCard";
+import { projects } from "@/data";
 import Link from "next/link";
 
 export default function Home() {
@@ -17,27 +18,18 @@ export default function Home() {
           </h2>
         </Link>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ProjectCard
-            title="Prompt with Friends"
-            description="A social party game where players write creative prompts and compete to generate the funniest or most on-theme AI images — the best image wins the round."
-            image="/images/pwf_logo.png"
-            technologies={["ReactNative", "GenAI", "Python", "Django"]}
-            objectFit="contain"
-          />
-          <ProjectCard
-            title="Capwise"
-            description="A custom fantasy basketball platform that transforms a dynasty league into a true front office experience— complete with salary cap management, rookie drafts, and a real-time trade machine."
-            image="/images/capwise_logo.png"
-            technologies={["Next.js", "Stripe", "Tailwind", "MongoDB"]}
-            objectFit="contain"
-          />
-          <ProjectCard
-            title="TripleBlind Router"
-            description="Developed the TripleBlind Router, the core service powering authentication, data sharing permissions, and multi-party compute orchestration between organizations within the Privacy Suite platform."
-            image="/images/TripleBlind_logo.png"
-            technologies={["Django", "API", "React", "Celery"]}
-            objectFit="contain"
-          />
+          {projects
+            .filter(project => project.featured)
+            .map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                technologies={project.technologies}
+                objectFit={project.objectFit}
+              />
+            ))}
         </div>
       </section>
 
