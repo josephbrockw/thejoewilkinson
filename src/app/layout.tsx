@@ -7,8 +7,8 @@ import { Providers } from "./providers";
 
 
 export const metadata: Metadata = {
-  title: "Joe Wilkinson - Full Stack Developer",
-  description: "Personal portfolio of Joe Wilkinson - Full Stack Developer specializing in modern web technologies",
+  title: "Joe Wilkinson - Entrepreneurial Engineer",
+  description: "Personal portfolio of Joe Wilkinson - Entrepreneurial Engineer specializing in bringing ideas to market.",
 };
 
 export default function RootLayout({
