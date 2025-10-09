@@ -18,21 +18,23 @@ export default function Home() {
         </Link>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProjectCard
-            title="Data Marketplace API"
-            description="Django + React platform enabling secure data sharing with Stripe integration and real-time analytics."
-            image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center"
-            technologies={["Django", "React", "Stripe", "PostgreSQL"]}
+            title="Prompt with Friends"
+            description="Mobile game where users create prompts to create the best image for a given theme."
+            image="/images/pwf_logo.png"
+            technologies={["ReactNative", "GenAI", "Python", "Django"]}
+            objectFit="contain"
           />
           <ProjectCard
-            title="E-commerce Platform"
-            description="Next.js + Stripe integration with inventory management and real-time analytics dashboard."
-            image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&crop=center"
+            title="Capwise"
+            description="A custom fantasy basketball platform that transforms a dynasty league into a true front office experience— complete with salary cap management, rookie drafts, and a real-time trade machine."
+            image="/images/capwise_logo.png"
             technologies={["Next.js", "Stripe", "Tailwind", "MongoDB"]}
+            objectFit="contain"
           />
           <ProjectCard
             title="AI Chat Application"
             description="Real-time chat with OpenAI integration, built with Socket.io and React for seamless conversations."
-            image="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop&crop=center"
+            image="null"
             technologies={["React", "OpenAI", "Socket.io", "Node.js"]}
           />
         </div>
