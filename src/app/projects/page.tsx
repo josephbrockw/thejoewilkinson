@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             My Projects
           </h1>
           <p className="text-lg md:text-xl text-white/65 max-w-2xl mx-auto leading-relaxed">
-            A portfolio of lean, scalable applications built for real-world startup challenges —
+            A portfolio of lean, scalable applications built for real-world startup challenges -
             from MVPs and SaaS platforms to experimental side projects.
           </p>
         </div>
