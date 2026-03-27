@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        // Forest green — used for headings and brand elements
+        forest: "#064E3B",
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['Sora', 'sans-serif'],
@@ -17,51 +21,40 @@ module.exports = {
       },
     },
   },
-  darkMode: "class",
   plugins: [
     nextui({
       themes: {
-        dark: {
+        light: {
           colors: {
-            // Core brand
-            background: "#0E1116",
-            foreground: "#F5F7FA",
-            focus: "#3B82F6",
-
-            // Brand palette
+            background: "#FFFFFF",
+            foreground: "#1C1917",
+            focus: "#F59E0B",
             primary: {
-              DEFAULT: "#3B82F6",
+              DEFAULT: "#F59E0B",
               foreground: "#FFFFFF",
-              50: "#EFF6FF",
-              100: "#DBEAFE", 
-              200: "#BFDBFE",
-              300: "#93C5FD",
-              400: "#60A5FA",
-              500: "#3B82F6",
-              600: "#2563EB",
-              700: "#1D4ED8",
-              800: "#1E40AF",
-              900: "#1E3A8A",
+              50: "#FFFBEB",
+              100: "#FEF3C7",
+              200: "#FDE68A",
+              300: "#FCD34D",
+              400: "#FBBF24",
+              500: "#F59E0B",
+              600: "#D97706",
+              700: "#B45309",
+              800: "#92400E",
+              900: "#78350F",
             },
             secondary: {
-              DEFAULT: "#1A1E25",
-              foreground: "#F5F7FA",
+              DEFAULT: "#6B7280",
+              foreground: "#FFFFFF",
             },
-
-            // Components
             default: {
-              DEFAULT: "#2A2F38",
-              foreground: "#F5F7FA",
+              DEFAULT: "#F3F4F6",
+              foreground: "#1C1917",
             },
-            content1: "#1A1E25", // card bg
-            content2: "#0E1116",
-            content3: "#2A2F38",
-            content4: "#3B82F6",
-
-            // Feedback
-            success: "#10B981",
-            warning: "#F59E0B",
-            danger: "#E63946",
+            content1: "#FFFFFF",
+            content2: "#F9FAFB",
+            content3: "#F3F4F6",
+            divider: "#E5E7EB",
           },
         },
       },

@@ -8,7 +8,7 @@ export function CTAButton() {
       color="primary"
       size="lg"
       radius="md"
-      className="font-semibold shadow-md hover:shadow-lg transition-all hero-glow"
+      className="font-semibold shadow-sm hover:shadow-md transition-all"
     >
       See My Work
     </Button>
