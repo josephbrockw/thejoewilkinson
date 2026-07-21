@@ -6,13 +6,6 @@ import { AppButton } from "@/components/AppButton";
 import { projects } from "@/data";
 import Link from "next/link";
 
-const STATS = [
-  { number: "10+", label: "Years Building"     },
-  { number: "10+", label: "Products Shipped"   },
-  { number: "3",   label: "Live SaaS Products" },
-  { number: "15+", label: "Technologies"       },
-];
-
 const TIMELINE = [
   {
     year: "2013",

@@ -179,7 +179,7 @@ function QuarterExample() {
             <div className="ln-rev-line"><span className="ln-rev-k car">Carry</span><span>{r.carry}</span></div>
           </div>
         ))}
-        <p className="ln-subnote">Fill one block at each month's end; read all three as the retro before planning the next quarter.</p>
+        <p className="ln-subnote">Fill one block at each month&apos;s end; read all three as the retro before planning the next quarter.</p>
       </div>
     </div>
   );
@@ -611,7 +611,7 @@ export default function Page() {
             <div className="ln-panel">
               <h3 className="ln-panel-h">Right page: the review</h3>
               <ul className="ln-list">
-                <li>At each month's end, write three lines for that month: wins, misses, and what carries forward.</li>
+                <li>At each month&apos;s end, write three lines for that month: wins, misses, and what carries forward.</li>
                 <li>Before planning the next quarter, read all three blocks together. That reading is the retro.</li>
               </ul>
             </div>
@@ -642,7 +642,7 @@ export default function Page() {
               <h3 className="ln-panel-h">Left page: the calendar</h3>
               <ul className="ln-list">
                 <li><b>Columns 1 and 2:</b> the date and the weekday, one row per day of the month.</li>
-                <li><b>Middle:</b> room to jot that day's events.</li>
+                <li><b>Middle:</b> room to jot that day&apos;s events.</li>
                 <li><b>Last three columns:</b> one key habit each. Fill the dot on the days you did it.</li>
               </ul>
             </div>
