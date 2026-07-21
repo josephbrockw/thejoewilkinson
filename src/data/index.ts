@@ -10,7 +10,7 @@ interface Project {
 export const projects: Project[] = [
     {
         title: "Omnigraph",
-        description: "An open-source knowledge graph mapping the connections between every domain of human understanding and making those connections navigable through AI.",
+        description: "An open-source knowledge graph mapping the connections between every domain of human understanding, combining Neo4j graph traversal with pgvector semantic search so the connections stay navigable through AI.",
         image: "/images/omnigraph-logo-dark.svg",
         technologies: ["Neo4j", "pgvector", "Django", "LLM API"],
         objectFit: "contain",
@@ -18,7 +18,7 @@ export const projects: Project[] = [
     },
     {
         title: "Whyyy",
-        description: "A full-stack decision documentation tool with semantic search: capture the 'why' behind your decisions and surface them later using AI-powered vector similarity search.",
+        description: "A decision documentation tool built on a semantic retrieval pipeline: FastEmbed embeddings over pgvector surface the 'why' behind past decisions by meaning rather than keyword match. Live at whyyy.app.",
         image: "/images/whyyy.png",
         technologies: ["FastEmbed", "pgvector", "GenAI", "Stripe"],
         featured: true,
@@ -26,11 +26,11 @@ export const projects: Project[] = [
     },
     {
         title: "F1 Fantasy ML Pipeline",
-        description: "A walk-forward machine learning system for F1 Fantasy - featuring an XGBoost performance predictor, ILP/Monte Carlo lineup optimizer, and price trajectory simulator across historical races of backtested data.",
+        description: "An end-to-end ML system that turns race predictions into lineup decisions. XGBoost predicts driver and constructor performance, validated walk-forward across historical races so results reflect what the model actually knew at the time. An ILP solver then picks the optimal lineup under budget and roster constraints, with a greedy solver as the fast fallback and Monte Carlo simulation for price trajectories.",
         image: "/images/ff1-logo.png",
-        technologies: ["Data Pipeline", "Django", "XGBoost", "scikit-learn"],
+        technologies: ["XGBoost", "ILP Optimization", "Monte Carlo", "scikit-learn", "Django"],
         objectFit: "cover",
-        featured: false
+        featured: true
     },
     {
         title: "Prompt with Friends",

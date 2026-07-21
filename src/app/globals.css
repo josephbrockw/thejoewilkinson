@@ -8,6 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* Forest green — used for headings and brand elements */
+  --color-forest: #064E3B;
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Sora', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;

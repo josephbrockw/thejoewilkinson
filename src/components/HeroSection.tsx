@@ -14,12 +14,13 @@ export function HeroSection() {
             Joe Wilkinson
           </h1>
           <h2 className="font-heading text-lg md:text-xl text-forest/60 font-medium mb-6 tracking-wide">
-            Entrepreneurial Engineer · Startup Builder · Full-Stack Expert
+            AI/ML Engineer · Full-Stack Builder · Founder&apos;s Mindset
           </h2>
           <p className="text-base md:text-lg text-gray-500 mb-10 leading-relaxed">
-            Transforming innovative concepts into scalable digital solutions.
-            From idea to MVP to enterprise-scale applications, I bridge the gap
-            between vision and execution.
+            I build the software businesses run on, and the AI that makes it
+            smarter. For over a decade I&apos;ve turned ideas into products that
+            ship fast, scale when they need to, and drive real results, always
+            choosing the right tool for the problem instead of the trendiest one.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <AppButton href="/projects" variant="primary" size="lg">

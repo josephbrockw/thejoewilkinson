@@ -24,7 +24,7 @@ const TIMELINE = [
     year: "2015",
     title: "Going All-In on Engineering",
     description:
-      "After working in marketing and teaching myself web development in my spare time, I started working a small development agency as an engineer.",
+      "After working in marketing and teaching myself web development in my spare time, I started working at a small development agency as an engineer.",
   },
   {
     year: "2016",
@@ -45,14 +45,32 @@ const TIMELINE = [
       "Launched Pollex (pollex.studio) a technical partnership studio that helps non-technical founders build MVPs through a hybrid cash + equity model. We handle discovery, product roadmap, development, and brand design end-to-end.",
   },
   {
-    year: "Now",
-    title: "Continuing to Deliver Products",
+    year: "2026",
+    title: "Senior AI Software Engineer at NREIG",
     description:
-      "Currently engineering at PressurePro, building a modern tire management platform on Next.js and MongoDB. Continuing to partner with early-stage founders through Pollex. Building Omnigraph to try to connect all human knowledge. Always shipping something new.",
+      "Joined NREIG to implement custom ML and AI systems in production: fine-tuning small language models for domain-specific tasks. Currently going deep on Bayesian methods. The through-line is matching the technique to the problem instead of reaching for the same tool every time.",
+  },
+  {
+    year: "Now",
+    title: "Building Across the Stack",
+    description:
+      "Shipping AI systems at NREIG, and continuing with PressurePro as a contractor on their tire management platform. Whyyy is live at whyyy.app. Still partnering with early-stage founders through Pollex. Always shipping something new.",
   },
 ];
 
+// Pick a column count that divides the featured projects evenly, so the last
+// row is never left with a single orphaned card. Class strings are written out
+// in full so Tailwind's scanner can see them.
+function featuredGridClasses(count: number) {
+  if (count % 3 === 0) return { cols: "lg:grid-cols-3", width: "max-w-6xl" };
+  if (count % 2 === 0) return { cols: "lg:grid-cols-2", width: "max-w-4xl" };
+  return { cols: "lg:grid-cols-3", width: "max-w-6xl" };
+}
+
 export default function Home() {
+  const featured = projects.filter((project) => project.featured);
+  const grid = featuredGridClasses(featured.length);
+
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
@@ -73,22 +91,28 @@ export default function Home() {
                 intersection of clean code and real business outcomes, building products that
                 ship fast, scale when they need to, and actually solve problems people have.
               </p>
+              <p className="text-white/88 text-lg leading-relaxed mb-6">
+                These days most of that work is machine learning. I fine-tune small language
+                models, build gradient-boosted predictors, and wire them to optimizers that
+                turn a forecast into an actual recommendation. The skill I care most about
+                isn&apos;t any one technique, it&apos;s diagnosis: knowing when a problem wants
+                a fine-tuned model, a tree ensemble, a solver, or just a well-designed prompt.
+              </p>
               <p className="text-white/88 text-lg leading-relaxed">
-                I&apos;ve spent years moving between the engineering and the entrepreneurial
-                side: writing the code, architecting the systems, and figuring out what to
-                build and why. That dual perspective is what makes me most useful at the
-                early stages of a product.
+                The two halves reinforce each other. A model that never leaves the notebook
+                isn&apos;t worth much, and the hard part is usually getting it into software
+                people actually use, with the evaluation and plumbing to keep it honest.
               </p>
             </div>
             <div>
               <h3 className="font-heading text-xl font-semibold text-white mb-6">What I bring</h3>
               <div className="space-y-4">
                 {[
-                  "Idea → MVP in weeks, not months",
-                  "Full-stack from database schema to UI to deployment",
-                  "AI & LLM integration (OpenAI, RAG pipelines)",
-                  "The full SaaS stack: Stripe, auth, multi-tenancy",
-                  "Deep experience with Django + React / Next.js",
+                  "Custom ML: fine-tuned SLMs, gradient boosting, Bayesian methods",
+                  "Optimization: ILP and greedy solvers for real decision recommendations",
+                  "LLM systems: RAG, semantic search, agentic workflows",
+                  "Full-stack delivery: schema → UI → deploy, Django + Next.js",
+                  "The judgment to pick the right tool, and to skip the LLM when it's wrong",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <span className="mt-1.5 w-4 h-4 rounded-full bg-white/25 flex items-center justify-center flex-shrink-0">
@@ -103,27 +127,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── How I Approach ML/AI ── amber accent ────────────────── */}
+      <section className="py-20 px-4 bg-amber-50">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-heading text-4xl font-bold text-forest mb-4 text-center">
+            How I Approach ML/AI
+          </h2>
+          <p className="text-forest/65 text-lg text-center max-w-2xl mx-auto mb-14">
+            Most AI work fails for unglamorous reasons: the wrong technique for the
+            problem, or a good model that never makes it into production. Here&apos;s
+            how I avoid both.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Understand the problem first",
+                body: "Before any model, I get clear on what decision this is supposed to change and what it costs to be wrong. Half the time that conversation reveals the real problem isn't a modeling problem at all.",
+              },
+              {
+                step: "02",
+                title: "Match the technique to the constraints",
+                body: "Data volume, latency budget, interpretability requirements, and cost narrow the field fast. A fine-tuned small model, a tree ensemble, a solver, and an LLM call are very different answers, and the constraints usually pick one.",
+              },
+              {
+                step: "03",
+                title: "Build the evaluation before the model",
+                body: "If you can't measure it honestly, you can't improve it or defend it. I set up backtesting and offline evaluation up front, which is what makes it possible to tell real gains from noise.",
+              },
+              {
+                step: "04",
+                title: "Ship it into real software",
+                body: "A notebook isn't a product. The model has to live behind an API, in a pipeline, in a UI someone uses, with monitoring for when the data shifts underneath it. That's where full-stack experience earns its keep.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="p-6 rounded-2xl bg-white border border-forest/10"
+              >
+                <span className="font-mono text-sm text-amber-600 font-semibold">
+                  {item.step}
+                </span>
+                <h3 className="font-heading text-xl font-semibold text-forest mt-2 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-forest/65 leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-forest/70 text-center mt-12 max-w-2xl mx-auto">
+            Sometimes the right answer is a 200-line model that runs in
+            milliseconds instead of an LLM call. Knowing when to reach for the
+            simpler tool is most of the job.
+          </p>
+        </div>
+      </section>
+
       {/* ── Featured Projects ── white ──────────────────────────── */}
       <section className="py-20 px-4 bg-white" id="projects">
-        <div className="max-w-6xl mx-auto">
+        <div className={`${grid.width} mx-auto`}>
           <Link href="/projects" className="block text-center mb-12 group">
             <h2 className="font-heading text-4xl font-bold text-forest group-hover:text-forest/75 transition-colors cursor-pointer">
               Featured Projects
             </h2>
           </Link>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects
-              .filter(project => project.featured)
-              .map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  technologies={project.technologies}
-                  objectFit={project.objectFit}
-                />
-              ))}
+          <div className={`grid md:grid-cols-2 ${grid.cols} gap-6`}>
+            {featured.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                technologies={project.technologies}
+                objectFit={project.objectFit}
+              />
+            ))}
           </div>
           <div className="text-center mt-10">
             <AppButton href="/projects" variant="secondary">
@@ -160,11 +238,25 @@ export default function Home() {
 
       {/* ── Skills ── amber accent ──────────────────────────────── */}
       <section className="py-20 px-4 bg-amber-50">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="font-heading text-4xl font-bold text-forest mb-12">
             Technologies & Skills
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6">
+              <h3 className="font-heading text-xl text-forest mb-4">AI &amp; ML</h3>
+              <p className="text-forest/65">
+                XGBoost, scikit-learn, PyTorch, SLM fine-tuning, Bayesian methods,
+                ILP / optimization, RAG, pgvector, FastEmbed, LLM APIs
+              </p>
+            </div>
+            <div className="p-6">
+              <h3 className="font-heading text-xl text-forest mb-4">Backend</h3>
+              <p className="text-forest/65">
+                Python, Django, Django Rest Framework, Flask, PostgreSQL, MongoDB,
+                Neo4j, Celery
+              </p>
+            </div>
             <div className="p-6">
               <h3 className="font-heading text-xl text-forest mb-4">Frontend</h3>
               <p className="text-forest/65">
@@ -172,15 +264,9 @@ export default function Home() {
               </p>
             </div>
             <div className="p-6">
-              <h3 className="font-heading text-xl text-forest mb-4">Backend</h3>
+              <h3 className="font-heading text-xl text-forest mb-4">Infrastructure</h3>
               <p className="text-forest/65">
-                Python, Django, Django Rest Framework, Flask, PostgreSQL, MongoDB
-              </p>
-            </div>
-            <div className="p-6">
-              <h3 className="font-heading text-xl text-forest mb-4">Tools</h3>
-              <p className="text-forest/65">
-                Git, Docker, AWS, Vercel, Stripe, OpenAI API, Celery, Bash Scripting
+                Docker, AWS, Vercel, Git, Stripe, Bash Scripting
               </p>
             </div>
           </div>
