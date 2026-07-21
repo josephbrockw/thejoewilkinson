@@ -163,7 +163,7 @@ function ThreadExample() {
       </div>
       <div className="ln-thread-foot">
         <div><b>SOURCES</b>&nbsp; Goodhart I-12 &#183; Kerr I-34 &#183; OKR book I-78</div>
-        <div><b>LINKS</b>&nbsp;&nbsp;&nbsp; &#8592; I-12 &#183; &#8594; I-78 &#183; &#8596; "feedback loops" I-55</div>
+        <div><b>LINKS</b>&nbsp;&nbsp;&nbsp; &#8592; I-12 &#183; &#8594; I-78 &#183; &#8596; &ldquo;feedback loops&rdquo; I-55</div>
       </div>
     </div>
   );
@@ -404,8 +404,8 @@ export default function Page() {
           <p className="ln-sub">A setup guide for capturing ideas and connecting them later</p>
           <p className="ln-thesis">
             One rule holds the whole system together: <b>keep capture and connection in
-            separate layers.</b> You can't predict which note will matter in six months, so
-            don't file for perfection as you read. Capture linearly in the <b>body</b> of each
+            separate layers.</b> You can&rsquo;t predict which note will matter in six months, so
+            don&rsquo;t file for perfection as you read. Capture linearly in the <b>body</b> of each
             page, keep the right margin clear, and do all of your connecting in one pass when
             you <b>finish each source</b>. Maintain your reference collections from the back of
             the book.
@@ -499,7 +499,7 @@ export default function Page() {
             that filled up? Fold in the migration steps below it.
           </p>
           <ol className="ln-steps">
-            <li><b>Inside cover:</b> write "Volume I" and today's date, then copy the six-mark notation key (section 06).</li>
+            <li><b>Inside cover:</b> write &ldquo;Volume I&rdquo; and today&rsquo;s date, then copy the six-mark notation key (section 06).</li>
             <li><b>From the very back, working inward:</b> label a spread for <em>Source index</em>, then <em>Theme index</em>, then a page for <em>Threads register</em>, then a page for <em>Dig-deeper</em>. Leave them blank.</li>
             <li><b>From the front:</b> number the first ten or so pages, and draw a light vertical rule near the right edge of each. That strip is your review margin.</li>
             <li><b>Start your first source on page 1</b> (section 04).</li>
@@ -526,7 +526,7 @@ export default function Page() {
             <div className="ln-panel">
               <h3 className="ln-panel-h">Carry forward</h3>
               <ul className="ln-list">
-                <li><b>Open idea threads:</b> recopy each one's current synthesis onto a fresh page; on the old page write "moved to Vol II p.X".</li>
+                <li><b>Open idea threads:</b> recopy each one&rsquo;s current synthesis onto a fresh page; on the old page write &ldquo;moved to Vol II p.X&rdquo;.</li>
                 <li><b>Theme index:</b> rebuild with open threads only; they start collecting new page numbers.</li>
                 <li><b>Register:</b> recreate with open threads only; closed ones stay archived.</li>
                 <li><b>Dig-deeper:</b> bring over items you still care about.</li>
@@ -552,10 +552,10 @@ export default function Page() {
           </p>
           <ol className="ln-steps">
             <li><b>Turn to the next blank page</b> in your reading-notes stream and note its page number.</li>
-            <li><b>Write a header:</b> title, author, and the page it starts on. For example, "Thinking in Systems, Meadows, I-8".</li>
+            <li><b>Write a header:</b> title, author, and the page it starts on. For example, &ldquo;Thinking in Systems, Meadows, I-8&rdquo;.</li>
             <li><b>Log it in the Source index:</b> one line, title to its starting page.</li>
             <li><b>Read and capture in the body only.</b> Keep the right margin clear; that space is reserved for the finish review.</li>
-            <li><b>Keep capturing linearly</b> across as many pages as the source needs. Don't stop to connect ideas yet.</li>
+            <li><b>Keep capturing linearly</b> across as many pages as the source needs. Don&rsquo;t stop to connect ideas yet.</li>
           </ol>
         </section>
 
@@ -567,10 +567,10 @@ export default function Page() {
             source, and it does all of the connective work in a single sitting.
           </p>
           <ol className="ln-steps">
-            <li><b>Harvest Seeds.</b> On the last page of this source's notes, write a Seeds block: the 3 to 5 ideas worth keeping, each with a word on what it connects to or contradicts.</li>
-            <li><b>Fill the right margins.</b> Flip back through this source's pages and annotate the margin with the notation set (connects, contradicts, develop, verify, promote, dig).</li>
+            <li><b>Harvest Seeds.</b> On the last page of this source&rsquo;s notes, write a Seeds block: the 3 to 5 ideas worth keeping, each with a word on what it connects to or contradicts.</li>
+            <li><b>Fill the right margins.</b> Flip back through this source&rsquo;s pages and annotate the margin with the notation set (connects, contradicts, develop, verify, promote, dig).</li>
             <li><b>Promote recurring ideas.</b> Anything you marked to promote, or that now shows up in a second source, gets its own Idea thread page. Link both ways.</li>
-            <li><b>Update the Theme index.</b> Add this source's page numbers under each thread it touched.</li>
+            <li><b>Update the Theme index.</b> Add this source&rsquo;s page numbers under each thread it touched.</li>
             <li><b>Update the Threads register.</b> Add any new open threads; mark closed the ones you are done with.</li>
             <li><b>Clear the dig-deeper marks.</b> Copy every down-arrow into the Dig-deeper list, then pick your next read from it.</li>
           </ol>
